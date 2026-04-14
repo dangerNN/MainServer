@@ -28,29 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxMessages = new System.Windows.Forms.ListBox();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
+            this.btnSendPhoto = new System.Windows.Forms.Button();
+            this.messagesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // listBoxMessages
-            // 
-            this.listBoxMessages.FormattingEnabled = true;
-            this.listBoxMessages.Location = new System.Drawing.Point(12, 12);
-            this.listBoxMessages.Name = "listBoxMessages";
-            this.listBoxMessages.Size = new System.Drawing.Size(360, 290);
-            this.listBoxMessages.TabIndex = 0;
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(12, 320);
+            this.txtMessage.Location = new System.Drawing.Point(12, 374);
+            this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(260, 20);
+            this.txtMessage.Size = new System.Drawing.Size(329, 51);
             this.txtMessage.TabIndex = 1;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(290, 318);
+            this.btnSend.Location = new System.Drawing.Point(347, 372);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(82, 23);
             this.btnSend.TabIndex = 2;
@@ -58,21 +52,44 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
+            // btnSendPhoto
+            // 
+            this.btnSendPhoto.Location = new System.Drawing.Point(347, 401);
+            this.btnSendPhoto.Name = "btnSendPhoto";
+            this.btnSendPhoto.Size = new System.Drawing.Size(82, 23);
+            this.btnSendPhoto.TabIndex = 3;
+            this.btnSendPhoto.Text = "Фото";
+            this.btnSendPhoto.UseVisualStyleBackColor = true;
+            this.btnSendPhoto.Click += new System.EventHandler(this.btnSendPhoto_Click);
+            // 
+            // messagesPanel
+            // 
+            this.messagesPanel.AutoScroll = true;
+            this.messagesPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.messagesPanel.Location = new System.Drawing.Point(12, 12);
+            this.messagesPanel.Name = "messagesPanel";
+            this.messagesPanel.Size = new System.Drawing.Size(417, 354);
+            this.messagesPanel.TabIndex = 4;
+            // 
             // PrivateChatForm
             // 
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(441, 444);
+            this.Controls.Add(this.messagesPanel);
+            this.Controls.Add(this.btnSendPhoto);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.listBoxMessages);
             this.Name = "PrivateChatForm";
             this.Text = "PrivateChat";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
-        private System.Windows.Forms.ListBox listBoxMessages;
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Button btnSend;
 
         #endregion
+
+        private System.Windows.Forms.Button btnSendPhoto;
+        private System.Windows.Forms.FlowLayoutPanel messagesPanel;
     }
 }

@@ -31,47 +31,42 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.listBoxChat = new System.Windows.Forms.ListBox();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnSendPublic = new System.Windows.Forms.Button();
             this.listBoxUsers = new System.Windows.Forms.ListBox();
             this.btnPrivate = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSendPhoto = new System.Windows.Forms.Button();
+            this.chatPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 8);
+            this.label1.Location = new System.Drawing.Point(26, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Имя";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(61, 24);
+            this.txtName.Location = new System.Drawing.Point(61, 5);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 1;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(167, 24);
+            this.btnRegister.Location = new System.Drawing.Point(167, 4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.Size = new System.Drawing.Size(75, 20);
             this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "Рег";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // listBoxChat
-            // 
-            this.listBoxChat.FormattingEnabled = true;
-            this.listBoxChat.Location = new System.Drawing.Point(10, 60);
-            this.listBoxChat.Name = "listBoxChat";
-            this.listBoxChat.Size = new System.Drawing.Size(450, 290);
-            this.listBoxChat.TabIndex = 3;
             // 
             // txtMessage
             // 
@@ -108,22 +103,71 @@
             this.btnPrivate.UseVisualStyleBackColor = true;
             this.btnPrivate.Click += new System.EventHandler(this.btnPrivate_Click);
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(61, 34);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Пароль";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(167, 34);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 20);
+            this.btnLogin.TabIndex = 10;
+            this.btnLogin.Text = "Войти";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnSendPhoto
+            // 
+            this.btnSendPhoto.Location = new System.Drawing.Point(385, 388);
+            this.btnSendPhoto.Name = "btnSendPhoto";
+            this.btnSendPhoto.Size = new System.Drawing.Size(75, 22);
+            this.btnSendPhoto.TabIndex = 11;
+            this.btnSendPhoto.Text = "Фото";
+            this.btnSendPhoto.UseVisualStyleBackColor = true;
+            this.btnSendPhoto.Click += new System.EventHandler(this.btnSendPhoto_Click);
+            // 
+            // chatPanel
+            // 
+            this.chatPanel.AutoScroll = true;
+            this.chatPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.chatPanel.Location = new System.Drawing.Point(12, 60);
+            this.chatPanel.Name = "chatPanel";
+            this.chatPanel.Size = new System.Drawing.Size(448, 290);
+            this.chatPanel.TabIndex = 12;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 461);
+            this.Controls.Add(this.chatPanel);
+            this.Controls.Add(this.btnSendPhoto);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnPrivate);
             this.Controls.Add(this.listBoxUsers);
             this.Controls.Add(this.btnSendPublic);
             this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.listBoxChat);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,10 +178,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.ListBox listBoxChat;
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Button btnSendPublic;
         private System.Windows.Forms.ListBox listBoxUsers;
         private System.Windows.Forms.Button btnPrivate;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSendPhoto;
+        private System.Windows.Forms.FlowLayoutPanel chatPanel;
     }
 }
